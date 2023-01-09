@@ -1,0 +1,677 @@
+@import "normalize.scss"
+@import "reset.scss"
+
+@font-face
+    font-family: 'Quicksand' 
+    font-weight: 0 100
+    src: url(../fonts/Quicksand-Light.ttf)
+@font-face
+    font-family: 'Quicksand' 
+    font-weight: 101 200
+    src: url(../fonts/Quicksand-Regular.ttf)
+@font-face
+    font-family: 'Quicksand' 
+    font-weight: 201 300
+    src: url(../fonts/Quicksand-Medium.ttf)
+@font-face
+    font-family: 'Quicksand' 
+    font-weight: 301 400
+    src: url(../fonts/Quicksand-SemiBold.ttf)
+@font-face
+    font-family: 'Quicksand' 
+    font-weight: 401 500
+    src: url(../fonts/Quicksand-Bold.ttf)
+
+*
+    box-sizing: border-box
+
+html, body
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+    scroll-behavior: smooth
+
+.header
+    min-height: 475px
+    background: black
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-content: center
+    //&__logo      
+.hamburger
+    position: relative
+    display: none
+    height: 16px
+    span
+        position: absolute
+        transition: 1s all
+        display: block
+        width: 27px
+        border: 1px solid #FFFFFF
+        &:nth-child(1)
+            transform: translateY(0px) rotate(0deg)
+        &:nth-child(2)
+            transform: translateY(8px) rotate(0deg)
+        &:nth-child(3)
+            transform: translateY(16px) rotate(0deg)
+    &_opened
+        margin-top: 2px
+        margin-right: 2px
+        span
+            &:nth-child(1)
+                transform: translateY(5px) rotate(-45deg)
+            &:nth-child(2)
+                opacity: 0%
+            &:nth-child(3)
+                transform: translateY(5px) rotate(45deg)
+.text-type
+    &_one
+        text-align: center
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 24px
+        text-shadow: 0px 2px 3px #000000
+.nav
+    position: sticky
+    z-index: 2
+    height: 117px
+    top: 0px
+    display: flex
+    justify-content: center
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+    margin-top: -10px
+    margin-bottom: -114px
+    row-gap: 69px
+    &__menu
+        margin-top: -13px
+        min-height: 55px
+        display: flex
+    &__text
+        width: 100%
+        padding-top: 16px
+    &__button
+        cursor: pointer
+        position: relative
+        min-width: 156px
+        min-height: 55px
+        width: 1px
+        height: 1px //because without this height: 100% doesn't work i dunno why
+        border: 4px solid #000000
+        border-radius: 17px
+        margin-right: 29.79px
+        &:last-child
+            margin-right: 0px
+        a
+            display: block
+            height: 100%
+            color: white
+            text-decoration: none
+        &:hover
+            p
+                height: 100%
+                font-weight: 250
+.container
+    max-width: 1440px
+    margin: 0 auto
+.main-section
+    position: relative
+    height: 830px
+    background-image: url('../img/main-background.jpg')
+    background-size: 100vw
+    background-repeat: no-repeat
+    &__container
+        position: relative
+        height: 100%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+    &__home 
+        position: relative
+        width: 555px
+    &__background
+        position: absolute
+        width: 100%
+        height: 100%
+        background: rgba(57, 73, 78, 0.7)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 46px
+        filter: blur(2px)
+    &__text
+        position: relative
+        padding-left: 31px
+        width: 95%
+        font-family: 'Quicksand'
+        font-weight: 150
+        color: white 
+    &__title
+        padding-top: 34px
+        font-size: 28px
+        margin-bottom: 28px
+    &__description
+        margin-bottom: 25px
+        font-size: 16px
+        line-height: 130%
+        text-align: justify
+    &__background-gradient
+        position: absolute
+        background: linear-gradient(180deg, rgba(54, 75, 80, 0) 0%, #364B50 100%)
+        height: 125px
+        width: 100%
+        bottom: 0
+.side-sections
+    background: linear-gradient(180deg, #364B50 0%, #1D2D30 36.74%, #162023 70.1%, #000000 100%)
+.title
+    position: relative
+    height: 53.36px
+    width: fit-content
+    padding-left: 30px
+    padding-right: 30px
+    &__container
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(206, 226, 230, 0.56)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        filter: blur(1.5px)
+        border-radius: 24px
+    &__text
+        position: relative
+        top: 10px
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 32px
+        color: white
+.background-for-panels
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(100, 119, 125, 0.69)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    filter: blur(2px)
+    border-radius: 46px
+.second-section
+    padding-top: 56.82px
+    margin-bottom: 179px
+    &__title
+        margin-bottom: 56.82px
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__about-us
+        position: relative
+        width: 680px
+        padding-left: 64px
+        padding-top: 88px
+    &__text
+        z-index: 1
+        position: relative
+        top: -44px
+        left: -32px
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 21px
+        color: white
+        line-height: 26px
+        text-align: justify
+        width: 616px
+    //&__background
+.slider
+    display: flex
+    align-items: center
+    &__box
+        position: relative
+        margin-right: 48px
+        background: rgba(217, 217, 217, 0.35) //just a blind plug
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 46px
+        overflow: hidden
+    &__container
+        position: absolute
+        display: flex
+        height: 100%
+        width: 500%
+    &__slide
+        height: 100%
+        width: 100%
+        img
+            width: 100%
+    &__arrow
+        height: 100%
+        border-width: 0px
+        background: none
+        cursor: pointer
+    //&__arrow-right
+    &__arrow-left
+        margin-right: 48px
+        transform: rotate(180deg)
+    &__mobile
+        display: none
+.third-section
+    margin-bottom: 179px
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        margin-bottom: 56.64px
+    &__slider-box
+        width: 814px
+        height: 481px
+.inviting
+    &__text
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 24px
+        text-align: center
+        color: #FFFFFF
+        margin-bottom: 27px
+    &__container
+        display: flex
+        justify-content: center
+        margin-bottom: 20px
+    //&__username
+    //&__tel
+    &__input
+        position: relative
+        padding-left: 18px
+        width: 262px
+        height: 65px
+        background: #D9D9D9
+        border-radius: 7px
+        border-width: 0
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 20px
+        color: rgba(0, 0, 0, 0.27)
+        transition: all 0.5s
+        margin-right: 30px
+        &:focus
+            color: #212529
+            background-color: #fff
+            outline: 0
+        &_invalid
+            border: 2px solid #a12727
+    &__request
+        cursor: pointer
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 20px
+        color: #FFFFFF
+        min-width: 8.25em
+        min-height: 3.25em
+        background: rgba(27, 44, 68, 0.74)
+        padding-left: 15px
+        padding-right: 15px
+        border-radius: 7px
+        border-width: 0px
+        transition: all 0.7s
+        &:hover
+            background: rgba(61, 100, 156, 0.74)
+    &__name-invalid
+        font-family: 'Quicksand'
+        font-weight: 450
+        font-size: 14px
+        color: #a12727
+        margin-bottom: 5px
+        transition: 0.3s all
+    &__tel-invalid
+        font-family: 'Quicksand'
+        font-weight: 450
+        font-size: 14px
+        color: #a12727
+        transition: 0.3s all
+    &_inactive
+        display: none
+    &__invalid
+        position: absolute
+
+.fourth-section
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__title
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 64px
+        text-align: center
+        color: #FFFFFF
+        margin-bottom: 69px
+    &__prayer
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 16px
+        text-align: center
+        color: rgba(255, 255, 255, 0.24)
+        margin-bottom: 122px
+    &__inviting
+        position: relative
+        margin-bottom: 247px
+.footer
+    font-family: 'Quicksand'
+    font-weight: 150
+    font-size: 16px
+    line-height: 20px
+    text-align: justify
+    color: #FFFFFF
+    padding-bottom: 41px
+.form-accepted
+    display: block
+    opacity: 100%
+    transition: all 0.8s
+    z-index: 5
+    top: 0
+    left: 0
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgba(6, 6, 6, 0.42)
+    width: 100vw
+    height: 100vh
+    &__visibly-inactive
+        opacity: 0
+    &__inactive
+        display: none
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 615px
+        height: 180px
+        background: linear-gradient(180deg, #325860 0%, #203A40 100%)
+        border-radius: 47px
+    &__title
+        padding-top: 21px
+        margin-bottom: 26px
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 32px
+        color: #FFFFFF
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    &__description
+        margin-bottom: 25px
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 20px
+        color: #FFFFFF
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    &__ok
+        cursor: pointer
+        width: 5.25em
+        height: 2.05em
+        background: rgba(27, 44, 68, 0.74)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 7px
+        border-width: 0
+        font-family: 'Quicksand'
+        font-weight: 150
+        font-size: 20px
+        text-align: center
+        color: #FFFFFF
+        transition: all 0.7s
+        &:hover
+            background: rgba(61, 100, 156, 0.74)
+
+
+anchor
+    position: relative
+    top: -80px
+#book
+    top: 0
+
+@media (max-width: 1440px)
+    .container
+        width: 1150px
+    .inviting
+        &__invalid
+            left: 200px
+
+@media (max-width: 1199px)
+    .container
+        width: 960px
+    .main-section
+        background-size: 120vw
+        background-position-x: -200px
+    .second-section
+        margin-bottom: 100px
+    .third-section
+        &__slider-box
+            width: 654px
+            height: 382px
+    .inviting
+        &__invalid
+            left: 105px
+
+@media (max-width: 991px)
+    .container
+        width: 720px
+    .header
+        min-height: 275px
+        height: 1px
+        &__logo
+            height: 60%
+    .main-section
+        background-size: 180vw
+        background-position-x: -400px
+        &__home
+            width: 444px
+        &__title
+            font-size: 20px
+        &__description
+            font-size: 13px
+        &__text
+            padding-left: 25px
+    .title
+        height: 45.56px
+        padding-left: 20px
+        padding-right: 20px
+        &__text
+            font-size: 24px
+    .second-section
+        &__about-us
+            width: 680px
+            padding-top: 75px
+        &__text
+            font-size: 18px
+    .slider
+        &__arrow
+            img
+                height: 70px
+    .third-section
+        margin-bottom: 85px
+        &__slider-box
+            width: 504px
+            height: 288px
+    .fourth-section
+        &__inviting
+            margin-bottom: 139px
+        &__title
+            font-size: 50px
+        &__prayer
+            font-size: 13px
+    .inviting
+        &__text
+            font-size: 20px
+        &__input
+            width: 184px
+            height: 57px
+            font-size: 16px
+        &__request
+            font-size: 16px
+        &__invalid
+            left: 80px
+    .footer
+        font-size: 13px
+
+@media (max-width: 767px)
+    .container
+        width: 540px
+    .header
+        z-index: 3
+        position: fixed
+        display: flex
+        justify-content: space-between
+        align-content: flex-start
+        background: linear-gradient(180deg, #000000 59.84%, rgba(0, 0, 0, 0) 100%)
+        min-height: 0
+        height: 126px
+        width: 100vw
+        &__logo
+            padding-left: 34px
+            padding-top: 18px
+            height: 77px
+    .hamburger
+        display: block
+        margin-top: 34px
+        margin-right: 47px
+    .nav
+        position: fixed
+        background: linear-gradient(270deg, #000000 21.63%, #000000 21.64%, rgba(0, 0, 0, 0) 100%)
+        right: -100%
+        display: block
+        height: 105vh
+        transition: 1s all
+        opacity: 0
+        &__menu
+            padding-top: 140px
+            padding-bottom: 100px
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__button
+            background: rgba(0, 0, 0, 0.55)
+        &_opened
+            right: 0
+            opacity: 100%
+    .main-section
+        background-size: 215vw
+        &__container
+            justify-content: center
+        &__home
+            width: 500px
+        &__title
+            font-size: 21px
+        &__description
+            font-size: 16px
+    .title
+        height: 53.56px
+        &__text
+            font-size: 31px
+    .second-section
+        &__about-us
+            width: 100%
+        &__text
+            width: 476px
+    .slider
+        flex-direction: column
+        align-content: center
+        &__arrow
+            display: none
+        &__box
+            margin-right: 0
+            margin-bottom: 20px
+            //height: 300px
+            //width: 577px
+        &__mobile
+            display: inline
+            font-family: 'Quicksand'
+            font-weight: 50
+            font-size: 25px
+            color: white
+    .fourth-section
+        &__prayer
+            margin-bottom: 70px
+    .inviting
+        &__invalid
+            left: -10px
+    .form-accepted
+        &__container
+            width: 88%
+    anchor
+        top: -140px
+    #book
+        top: -140px
+
+@media (max-width: 575px)
+    .container
+        width: 100%
+    .main-section
+        background-size: 1200px
+        margin-top: 0px
+        &__home
+            position: relative
+            width: 95%
+        &__title
+            padding-top: 25px
+            margin-bottom: 15px
+            font-size: 18px
+        &__description
+            font-size: 16px
+            width: 95%
+            padding-bottom: 20px
+        &__text
+            position: relative
+            top: 0
+            left: 0
+            margin-right: 0
+            padding-left: 35px
+    .second-section
+        &__about-us
+            width: 95%
+        &__text
+            width: 100%
+            font-size: 16px
+    .slider
+        &__box
+            width: 98%
+            //min-height: 40vh
+        &__mobile
+            margin: 0 auto
+    .third-section
+        &__slider
+            width: 100%
+    .inviting
+        &__container
+            flex-direction: column
+            align-items: center
+        &__input
+            margin-right: 0
+            margin-bottom: 20px
+        &__invalid
+            position: static
+            display: flex
+            flex-direction: column
+            align-items: center
+    .footer
+        padding: 20px 20px
+@media (max-width:  442px)
+    .slider
+        &__slide
+            img
+                width: auto
+                height: 100%
+    .form-accepted
+        &__container
+            height: auto
+        &__title
+            font-size: 7vw
+        &__description
+            font-size: 4vw
+        &__ok
+            font-size: 5vw
+            margin-bottom: 10px
+    .inviting
+        &__tel-invalid
+            font-size: 3.5vw
+        &__name-invalid
+            font-size: 3.5vw
+    
