@@ -86,7 +86,7 @@ function ChangeSlideToRight() {
     i++;
     carouselSlides.style.transform = 'translateX(' + -size * i + 'px)';
 }
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('resize', () => {
     size = slides[i].clientWidth;
     carouselSlides.style.transition = 'none';
     carouselSlides.style.transform = 'translateX(' + -size * i + 'px)';
