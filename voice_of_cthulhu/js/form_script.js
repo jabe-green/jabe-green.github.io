@@ -3,10 +3,12 @@
 let input_name = document.querySelector('input.inviting__username');
 
 let input_tel = document.querySelector('input.inviting__tel');
-
 let name_invalid = document.querySelector('p.inviting__name-invalid');
 let tel_invalid = document.querySelector('p.inviting__tel-invalid');
 
+const mask = new IMask(input_tel, {
+    mask: '+{1} (000) 000-0000'
+});
 //accept-screen apperance
 let form = document.querySelector('div.form-accepted');
 

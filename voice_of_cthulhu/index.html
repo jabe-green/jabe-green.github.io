@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./icons/favicons/apple-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="114x114" href="./icons/favicons/apple-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="120x120" href="./icons/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./icons/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/favicons/android-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./icons/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/favicons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="./icons/favicons/android-icon-192x192.png">
@@ -116,12 +116,12 @@
                         <p class="inviting__text">Hurry up and apply!</p>
                         <div class="inviting__container">
                             <input class="inviting__username inviting__input" type="text" placeholder="e.g. John Wilson" pattern="[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}" required>
-                            <input class="inviting__tel inviting__input" type="text" placeholder="e.g. 1 (555) 555-1234" pattern="[1-9]\s[(][0-9]{3}[)]\s[0-9]{3}[-][0-9]{4}" required>
+                            <input class="inviting__tel inviting__input" type="text" placeholder="e.g. 1 (555) 555-1234" pattern="[+][1-9]\s[(][0-9]{3}[)]\s[0-9]{3}[-][0-9]{4}" required>
                             <button class="inviting__request">Request</button>
                         </div>
                         <div class="inviting__invalid">
                             <p class="inviting__name-invalid inviting_inactive">Write your name like this: John Wilson</p>
-                            <p class="inviting__tel-invalid inviting_inactive">Write your phone number like this: 1 (555) 555-1234</p>
+                            <p class="inviting__tel-invalid inviting_inactive">Write your phone number like this: +1 (555) 555-1234</p>
                         </div>
                     </div>
                 </div>
@@ -139,12 +139,14 @@
                     </div>
                 </div>
             </section>
-            <footer class="footer container">Praesent euismod lorem a eros ullamcorper, a feugiat nisi vehicula. Suspendisse enim massa, viverra et massa viverra, aliquet fermentum nunc. Vivamus vel iaculis nisl. Nam sed dapibus lorem. Vestibulum vel tellus quis magna egestas blandit ac et urna. Curabitur eleifend luctus condimentum. Pellentesque id gravida ligula, et interdum libero. Cras justo turpis, elementum in sem blandit, convallis blandit tellus. Integer et auctor urna, eu auctor felis. Proin laoreet lacinia mauris non facilisis.</footer>
+            <footer class="footer container">
+                Praesent euismod lorem a eros ullamcorper, a feugiat nisi vehicula. Suspendisse enim massa, viverra et massa viverra, aliquet fermentum nunc. Vivamus vel iaculis nisl. Nam sed dapibus lorem. Vestibulum vel tellus quis magna egestas blandit ac et urna. Curabitur eleifend luctus condimentum. Pellentesque id gravida ligula, et interdum libero. Cras justo turpis, elementum in sem blandit, convallis blandit tellus. Integer et auctor urna, eu auctor felis. Proin laoreet lacinia mauris non facilisis.</footer>
         </section>
     </div>
 
+    <script src="./js/imask.js"></script>
     <script src="./js/slider_script.js"></script>
     <script src="./js/hamburger_script.js"></script>
-    <script src="./js/form_script.js"></script>
+    <script type="module" src="./js/form_script.js"></script>
 </body>
 </html>
