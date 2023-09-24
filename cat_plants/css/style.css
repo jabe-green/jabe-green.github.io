@@ -638,6 +638,7 @@ html, body {
   margin-bottom: 79px;
 }
 .second-section__plants-image {
+  aspect-ratio: auto;
   width: 956px;
 }
 
@@ -652,6 +653,7 @@ html, body {
   height: 100%;
 }
 .third-section__image {
+  aspect-ratio: auto;
   position: absolute;
   top: 100px;
   left: 98px;
@@ -746,6 +748,7 @@ html, body {
   text-align: center;
 }
 .swiper-slide img {
+  aspect-ratio: auto;
   max-width: 100%;
   height: auto;
 }
@@ -841,6 +844,7 @@ html, body {
           justify-content: center;
 }
 .fifth-section__plant-head img {
+  aspect-ratio: auto;
   width: 327px;
 }
 .fifth-section__pot-front {
@@ -852,6 +856,7 @@ html, body {
   top: 589px;
 }
 .fifth-section__pot-front img {
+  aspect-ratio: auto;
   width: 370px;
 }
 .fifth-section__pot-back {
@@ -863,6 +868,7 @@ html, body {
   top: 527px;
 }
 .fifth-section__pot-back img {
+  aspect-ratio: auto;
   width: 370px;
 }
 .fifth-section__foam-front {
@@ -874,6 +880,7 @@ html, body {
   top: 355px;
 }
 .fifth-section__foam-front img {
+  aspect-ratio: auto;
   width: 303px;
 }
 .fifth-section__foam-back {
@@ -885,6 +892,7 @@ html, body {
   top: 314px;
 }
 .fifth-section__foam-back img {
+  aspect-ratio: auto;
   width: 303px;
 }
 .fifth-section__gypsum-front {
@@ -896,6 +904,7 @@ html, body {
   top: 499px;
 }
 .fifth-section__gypsum-front img {
+  aspect-ratio: auto;
   width: 263px;
 }
 .fifth-section__gypsum-back {
@@ -907,12 +916,14 @@ html, body {
   top: 464px;
 }
 .fifth-section__gypsum-back img {
+  aspect-ratio: auto;
   width: 261px;
 }
 .fifth-section__leg {
   top: 300px;
 }
 .fifth-section__leg img {
+  aspect-ratio: auto;
   width: 71px;
 }
 
