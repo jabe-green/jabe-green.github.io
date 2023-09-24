@@ -1,0 +1,940 @@
+@import "normalize.scss"
+@import "reset.scss"
+
+@font-face
+    font-family: 'Montserrat' 
+    font-weight: 0 100
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf)
+@font-face
+    font-family: 'LeagueGothic' 
+    font-weight: 0 100
+    src: url(../fonts/LeagueGothicCyrillic.ttf)
+
+$primary: #1E1D2F
+$secondary: #FFC234
+$base-500: #110B20
+
+$seconds: 0.75s
+
+*
+    box-sizing: border-box
+
+html, body
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+
+.container
+    max-width: 1152px
+    margin: 0 auto
+
+.header
+    transition: 0.4s all ease-in-out
+    position: fixed
+    z-index: 2
+    width: 100%
+    height: 50px
+    background-color: $primary
+    &_hidden
+        transform: translateY(-100%)
+    &__logo__svg
+        display: block
+        font-size: 0px
+    &__container
+        position: relative
+        height: 100%
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__contacts
+        height: 24px
+        display: inline-flex
+        align-items: center
+        gap: 30px
+
+.contacts-btn
+    transition: 0.2s all ease-in-out
+    //position: absolute
+    font-family: "Buttons"
+    font-size: 20px
+    text-decoration: none
+    color: white
+    &__wrapper
+        //position: relative
+        height: 24px
+        width: 26px
+        display: flex
+        justify-content: center
+        align-items: center
+    &:hover
+        transform: scale(1.25)
+        color: $secondary
+
+.contacts-email
+    position: relative
+    &__title
+        transition: 0.2s all ease-in-out
+        position: absolute
+        top: 40px
+        left: 50%
+        transform: translate(-50%)
+        background-color: #171725
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 4px
+        height: 30px
+        width: 140px
+        & span
+            color: #FFF
+            text-align: center
+            font-family: 'Montserrat'
+            font-size: 14px
+            font-style: normal
+            font-weight: 500
+            line-height: 16px
+    &__text
+        transition: 0.2s all ease-in-out
+        user-select: none
+        cursor: pointer
+        color: #FFF
+        text-align: center
+        font-family: 'Montserrat'
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        line-height: 16px
+        &:hover
+            color: $secondary
+
+.hamburger
+    display: none
+    &__button
+        display: none
+
+.first-section
+    height: 100vh
+    background-image: url("../img/first section background.webp")
+    background-attachment: fixed
+    background-blend-mode: multiply
+    background-color: rgba(0,0,0,0.45)
+    background-size: cover
+    margin-bottom: 100px
+    &__container
+        height: 100%
+        display: flex
+        align-items: center
+    &__wrapper
+        padding-left: 98px
+        padding-top: 50px
+    &__title
+        user-select: none
+        font-family: "LeagueGothic"
+        font-size: 148px
+        color: white
+        margin-bottom: 10px
+    &__description
+        user-select: none
+        font-family: "LeagueGothic"
+        font-size: 30px
+        font-style: normal
+        letter-spacing: 1.5px
+        color: white
+        margin-bottom: 30px
+
+
+.preorder-button
+    transition: all 0.3s ease-in-out
+    border: none
+    height: 57px
+    width: 293px
+    background-color: white
+    border-radius: 3px
+    font-family: 'Montserrat'
+    font-size: 14px
+    font-weight: 700
+    color: black
+    cursor: pointer
+    &:hover
+        background-color: $secondary
+        color: $base-500
+
+.white-section
+    &-title
+        font-family: "LeagueGothic"
+        font-size: 48px
+        color: $base-500
+        text-align: center
+    &-description
+        font-family: "Montserrat"
+        font-weight: 500
+        font-size: 14px
+        color: #636272
+        text-align: center
+        line-height: 140%
+        letter-spacing: 0.7px
+
+.black-section
+    &-title
+        font-family: "LeagueGothic"
+        font-size: 48px
+        color: $secondary
+        letter-spacing: 2.4px
+    &-description
+        font-family: "Montserrat"
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 0.7px
+        color: white
+        line-height: 140%
+
+
+.second-section
+    &__container
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        margin-bottom: 15px
+    &__text-wrapper
+        width: 762px
+        margin-bottom: 79px
+    &__plants-image
+        width: 956px
+
+.third-section
+    height: 766px
+    width: 100%
+    background-color: $primary
+    margin-bottom: 75px
+    &__container
+        position: relative
+        height: 100%
+    &__image
+        position: absolute
+        top: 100px
+        left: 98px
+        width: 566px
+    &__wrapper
+        width: 273px
+        position: absolute
+        right: 98px
+        top: 172px
+    &__title
+        margin-bottom: 15px
+        
+.fourth-section
+    margin-bottom: 50px
+    &__title
+        margin-bottom: 50px
+
+.works-slider 
+    position: relative
+    &__navigation 
+        position: absolute
+        display: flex
+        justify-content: space-between
+        top: 50%
+        transform: translateY(-50%)
+        width: 100%
+    &-button
+        display: flex
+        align-items: center
+        user-select: none
+        transition: 0.2s all ease-in-out
+        height: 24px
+        width: 24px
+        position: relative
+        font-family: "Buttons"
+        font-size: 30px
+        color: #636272
+        cursor: pointer 
+        &:hover
+            transform: scale(1.25)
+            color: #4B4A56
+    &__title
+        font-family: "Montserrat"
+        font-size: 18px
+        font-weight: 500
+        color: $base-500
+        margin-bottom: 5px
+    &__sizes
+        font-family: "Montserrat"
+        font-size: 14px
+        font-weight: 500
+        color: #636272
+        margin-bottom: 20px
+
+.swiper
+    display: flex
+    justify-content: center
+    width: 956px
+    margin: 0 auto
+    &-slide 
+        width: 175px !important
+        text-align: center
+        img 
+            max-width: 100%
+            height: auto
+
+.fifth-section
+    margin-bottom: 150px
+    &__title
+        margin-bottom: 50px
+    &__container
+        height: 978px
+    &__pseudo-container
+        height: 870px
+    &__example-wrapper
+        position: relative
+        height: 100%
+    &__text-wrapper
+        transition: all $seconds ease-in-out
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &__mobile-text-wrapper
+        display: none
+    &__first-wrapper
+        position: absolute
+        top: 225px
+        left: 0px
+        height: 324px
+        width: 310px
+        &_closed
+            opacity: 0%
+            left: -100px
+    &__second-wrapper
+        position: absolute
+        top: 115px
+        right: 0px
+        height: 610px
+        width: 303px
+        &_closed
+            opacity: 0%
+            right: -100px
+    &__text
+        font-family: "Montserrat"
+        font-size: 14px
+        font-weight: 500
+        line-height: 140%
+        letter-spacing: 0.7px
+        color: #636272
+        & span
+            font-size: 18px
+            font-weight: 500
+            letter-spacing: 0.9px
+            color: $base-500
+    &__plant
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+    &__plant-wrapper
+        position: relative
+        height: 870px
+        width: 370px
+        & div
+            width: 100%
+            position: absolute
+            display: flex
+            justify-content: center
+    &__plant-head
+        & img 
+            width: 327px
+    &__pot
+        &-front
+            transition: top $seconds ease-in-out
+            top: 269px
+            &_opened
+                top: 589px
+            & img
+                width: 370px
+        &-back
+            transition: top $seconds ease-in-out
+            top: 207px
+            &_opened
+                top: 527px
+            & img
+                width: 370px
+    &__foam
+        &-front
+            transition: top $seconds ease-in-out
+            top: 280px
+            &_opened
+                top: 355px
+            & img
+                width: 303px
+        &-back
+            transition: top $seconds ease-in-out
+            top: 239px
+            &_opened
+                top: 314px
+            & img
+                width: 303px
+    &__gypsum
+        &-front
+            transition: top $seconds ease-in-out
+            top: 359px
+            &_opened
+                top: 499px
+            & img
+                width: 263px
+        &-back
+            transition: top $seconds ease-in-out
+            top: 324px
+            &_opened
+                top: 464px
+            & img
+                width: 261px
+    &__leg
+        top: 300px
+        & img
+            width: 71px
+    
+.sixth-section
+    margin-bottom: 150px
+    &__text-wrapper
+        width: 762px
+        margin: 0 auto
+        margin-bottom: 75px
+    &__title
+        margin-bottom: 15px
+    &__photo
+        background-image: url("../img/plantsPhoto.webp")
+        background-position-x: center
+        background-size: cover
+        background-attachment: fixed
+        height: 450px
+        width: 100vw
+
+.seventh-section
+    background-color: $primary
+    margin-bottom: 150px
+    height: 766px
+    &__container
+        position: relative
+        height: 100%
+    &__wrapper
+        position: absolute
+        top: 160px
+        left: 98px
+        width: 273px
+    &__title
+        margin-bottom: 15px
+    &__description
+        & span
+            color: $secondary
+    &__video
+        position: absolute
+        top: 100px
+        right: 98px
+        width: 566px
+
+.eighth-section
+    height: 501px
+    background-image: url("../img/first section background.webp")
+    background-blend-mode: multiply
+    background-color: rgba(0,0,0,0.45)
+    background-size: cover
+    background-position-y: -100px
+    &__container
+        padding-left: 98px
+        height: 100%
+        display: flex
+        align-items: center
+    &__wrapper
+        height: 201px
+    &__title
+        font-family: "LeagueGothic"
+        font-size: 48px
+        font-style: normal
+        font-weight: 400
+        color: white
+        letter-spacing: 2.4px
+        margin-bottom: 25px
+        & span
+            color: $secondary
+        br
+            display: none
+    &__description
+        font-family: Montserrat
+        font-size: 14px
+        font-style: normal
+        font-weight: 500
+        color: white
+        line-height: 140%
+        letter-spacing: 0.7px
+        margin-bottom: 35px
+
+.footer
+    width: 100%
+    height: 50px
+    background-color: $primary
+    &__container
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__contacts
+        height: 24px
+        display: inline-flex
+        align-items: center
+        gap: 72px
+
+//АДАПТИВ
+
+//Маленький компьютер или горизонтальный планшет
+@media (max-width: 1199px)
+    .container
+        max-width: 950px
+
+    .second-section
+        &__plants-image
+            width: 880px
+    
+    .third-section
+        &__image
+            width: 400px
+            top: 190px
+
+    .swiper
+        width: 803px
+        &-slide 
+            width: 137px !important
+            text-align: center
+            img 
+                max-width: 100%
+                height: auto
+
+    .fifth-section
+        &__container
+            height: 928px
+        &__plant-wrapper
+            transform: scale(0.9)
+        &__text
+            font-size: 12px
+            & span
+                font-size: 14px
+        &__second-wrapper
+            right: -40px
+            &_closed
+                right: -140px
+
+    .seventh-section
+        &__video
+            width: 450px
+            top: 180px
+
+    .eighth-section
+        background-size: 110%
+
+//Вертикальный планшет
+@media (max-width: 991px)
+    .container
+        max-width: 700px
+
+    .first-section
+        &__container
+            justify-content: center
+        &__wrapper
+            padding-left: 0
+
+    .black-section
+        &-title
+            font-size: 40px
+        &-description
+            font-size: 13px
+
+    .white-section
+        &-description
+            font-size: 13px
+
+    .second-section
+        &__text-wrapper
+            width: 700px
+        &__plants-image
+            width: 680px
+
+    .third-section
+        height: 575px
+        &__image
+            width: 360px
+            top: 112px
+            left: 0
+        &__wrapper
+            right: 0
+            top: 109px
+
+    .swiper
+        width: 599px
+        &-slide 
+            width: 137px !important
+            text-align: center
+            img 
+                max-width: 100%
+                height: auto
+
+    .fifth-section
+        margin-bottom: 150px
+        &__container
+            height: 800px
+        &__pseudo-container
+            height: 752px
+        &__title
+            margin-bottom: 0
+        &__plant-wrapper
+            top: -50px
+            transform: scale(0.75)
+        &__text
+            font-size: 12px
+            & span
+                font-size: 14px
+        &__first-wrapper
+            left: -100px
+            &_closed
+                left: -200px
+        &__second-wrapper
+            right: -120px
+            &_closed
+                right: -220px
+
+    .sixth-section
+        &__text-wrapper
+            width: 700px
+
+    .seventh-section
+        &__wrapper
+            left: 0
+        &__video
+            width: 400px
+            top: 181px
+            right: 0
+
+    .eighth-section
+        display: flex
+        justify-content: center
+        background-size: 140%
+        &__container
+            padding-left: 0
+        &__wrapper
+            height: fit-content
+    
+//горизонтальный телефон
+@media (max-width: 767px)
+    .container
+        max-width: 516px
+
+    .header__container
+        z-index: 1
+    .header__contacts
+        display: none
+
+    .contacts-email
+        &__text
+            width: fit-content
+        &__title
+            top: 30px
+
+    .hamburger
+        display: block
+        overflow: hidden
+        z-index: 0
+        height: 0px
+        background-color: $primary
+        position: relative
+        transition: 0.4s all ease-in-out
+        &_opened
+            height: 169px
+            .hamburger__container
+                transition: 0.75s all ease-in-out
+                opacity: 100%
+        &__container
+            transition: 0.3s all ease-in-out
+            height: 169px
+            display: flex
+            align-items: center
+            justify-content: center 
+            opacity: 0%
+        &__button
+            position: relative
+            display: flex
+            align-items: center
+            width: 20px
+            height: 15px
+            &-row
+                width: 100%
+                height: 2px
+                background-color: white
+                border-radius: 2px
+                animation: unSqueezeHamburger_middleRow 1.4s forwards
+                &::before,&::after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    height: 2px
+                    background-color: white
+                    border-radius: 2px
+                &::before
+                    animation: unSqueezeHamburger__upperRow 0.5s forwards
+                &::after
+                    animation: unSqueezeHamburger__lowerRow 0.5s forwards
+            &_pressed
+                .hamburger__button-row
+                    animation: squeezeHamburger_middleRow 0.3s forwards
+                    &::before
+                        animation: squeezeHamburger__upperRow 0.5s forwards
+                    &::after
+                        animation: squeezeHamburger__lowerRow 0.5s forwards
+        &__container
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__contacts
+            display: flex
+            gap: 40px
+            justify-content: center
+            margin-bottom: 20px
+
+    @keyframes squeezeHamburger_middleRow
+        0%
+            background-color: white
+        50%
+            background-color: white
+        100%
+            background-color: transparent
+    @keyframes squeezeHamburger__upperRow
+        0%
+            transform: translateY(-6px)
+        50%
+            transform: translateY(0px)
+        100%
+            transform: rotate(45deg)
+    @keyframes squeezeHamburger__lowerRow
+        0%
+            transform: translateY(6px)
+        50%
+            transform: translateY(0px)
+        100%
+            transform: rotate(-45deg)
+    
+    @keyframes unSqueezeHamburger_middleRow
+        0%
+            background-color: transparent
+        50%
+            background-color: white
+        100%
+            background-color: white
+    @keyframes unSqueezeHamburger__upperRow
+        0%
+            transform: rotate(45deg)
+        50%
+            transform: translateY(0px)
+        100%
+            transform: translateY(6px)
+            
+    @keyframes unSqueezeHamburger__lowerRow
+        0%
+            transform: rotate(-45deg)
+        50%
+            transform: translateY(0px)
+        100%
+            transform: translateY(-6px)
+            
+    .preorder-button
+        height: 44px
+        width: 228px
+        font-size: 12px
+        background-color: $secondary
+
+    .first-section
+        background-size: auto 850px
+        background-position: -130px -100px
+        &__wrapper
+            margin: 0 auto
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__title
+            font-size: 80px
+            text-align: center
+        &__description
+            font-size: 20px
+            text-align: center
+    
+    .white-section
+        &-title
+            text-align: left
+            font-size: 36px 
+            font-style: normal
+            font-weight: 400
+            letter-spacing: 1.8px
+        &-description
+            text-align: left
+            font-size: 10px
+
+    .black-section
+        &-title
+            font-size: 36px
+        &-description
+            font-size: 10px
+
+    .second-section
+        &__text-wrapper
+            width: 100%
+        &__plants-image
+            width: 100%
+    
+    .third-section
+        height: fit-content
+        &__image
+            padding-bottom: 50px
+            width: 100%
+            position: static
+        &__wrapper
+            padding-top: 75px
+            position: static
+            width: 100%
+        &__title
+            margin-bottom: 10px
+            br
+                display: none
+        &__description
+            margin-bottom: 50px
+        &__br
+            display: none
+
+    .swiper
+        width: 400px
+
+    .fifth-section
+        margin-bottom: 100px
+        &__container
+            height: 800px
+        &__example-wrapper
+            height: 100%
+        &__plant
+            left: 150px
+        &__plant-wrapper
+            top: -30px
+            transform: scale(0.8)
+        &__text-wrapper
+            display: none
+        &__mobile-text-wrapper
+            height: 575px
+            width: 148px
+            position: absolute
+            top: 130px
+            right: 0
+            display: block
+            transition: all 1.2s ease-in-out
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &_closed
+                opacity: 0
+                right: -175px
+        &__text
+            font-size: 10px
+            span
+                font-size: 12px
+
+    .sixth-section
+        margin-bottom: 100px
+        &__photo
+            height: 246px
+            background-size: contain
+            background-attachment: scroll
+            background-position: center
+        &__text-wrapper
+            width: 100%
+            margin-bottom: 30px
+
+    .seventh-section
+        height: fit-content
+        margin-bottom: 100px
+        &__video
+            position: static
+            width: 100%
+            padding-bottom: 50px
+        &__wrapper
+            width: 100%
+            padding-top: 75px
+            position: static
+            margin-bottom: 30px
+
+    .eighth-section
+        height: 376px
+        background-size: 200%
+        background-position: -100px -175px
+        &__wrapper
+            display: flex
+            flex-direction: column
+            align-items: left
+        &__title
+            text-align: left
+            letter-spacing: 1.8px
+            br
+                display: inline
+        &__description
+            text-align: left
+        
+    .footer__contacts
+        gap: 49px
+
+//вертикальный телефон и маленьких планшетов
+@media (max-width: 575px)
+    .container
+        width: 315px
+
+    .swiper
+        width: 146px
+        &-slide
+            width: 100% !important
+
+    .fifth-section
+        position: relative
+        &__pseudo-container
+            position: absolute
+            left: 0
+            min-width: 100vw
+        &__container
+            height: 825px
+        &__plant
+            position: absolute
+            left: 40px
+        &__description
+            letter-spacing: 1px
+        &__mobile-text-wrapper
+            right: 100px
+            &_closed
+                right: -20%
+
+
+    .sixth-section__photo
+        background-size: cover
+
+    .eighth-section
+        background-size: cover
+        background-position: -55px 0 
+        &__title
+            font-size: 36px
+        &__description
+            font-size: 10px
+
+//для менее широких вертикальных телефонов
+@media (max-width: 505px)
+    .fifth-section__mobile-text-wrapper
+            right: 2%
+            &_closed
+                right: -20%
+//ОЧЕНЬ маленький телефон
+@media (max-width: 320px)
+    .container
+        width: 100%
+
+    .fifth-section__mobile-text-wrapper
+            right: 0
+            &_closed
+                right: -200px
+    
