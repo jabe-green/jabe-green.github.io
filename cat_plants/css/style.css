@@ -367,15 +367,15 @@ table {
 
 @font-face {
   font-family: "Montserrat";
+  font-display: swap;
   font-weight: 0 100;
   src: url(../fonts/Montserrat-VariableFont_wght.ttf);
-  font-display: swap;
 }
 @font-face {
   font-family: "LeagueGothic";
+  font-display: swap;
   font-weight: 0 100;
   src: url(../fonts/LeagueGothicCyrillic.ttf);
-  font-display: swap;
 }
 * {
   -webkit-box-sizing: border-box;
