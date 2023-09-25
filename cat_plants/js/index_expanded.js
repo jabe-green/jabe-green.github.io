@@ -187,15 +187,17 @@ const potTarget = plant;
 potObserver.observe(potTarget);
 
 //video replaying
-
+const test = document.querySelector(".seventh-section")
 const video = document.querySelector(".seventh-section__video");
 const videoObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(vid => {
     if(vid.isIntersecting) {
       video.currentTime = "0";
       video.play();
+      test.style = "background-color: yellow";
     } else {
       video.pause();
+      test.style = "background-color: red";
     }
   });
 });
