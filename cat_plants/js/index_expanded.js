@@ -194,10 +194,8 @@ const videoObserver = new IntersectionObserver((entries, observer) => {
     if(vid.isIntersecting) {
       video.currentTime = "0";
       video.play();
-      test.style = "background-color: yellow";
     } else {
       video.pause();
-      test.style = "background-color: red";
     }
   });
 });
