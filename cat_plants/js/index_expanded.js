@@ -98,6 +98,29 @@ const swiper = new Swiper(worksSlider, {
   }
 });
 
+//Swiper button in mobile
+const buttons = document.querySelectorAll('[class*="works-slider-button"]');
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    if(window.innerWidth > 767) {
+      return false;
+      console.log(0)
+    }
+    
+    button.animate([ 
+      { transform: "scale(1)", color: "#636272" },
+      { transform: "scale(1.25)" ,color: "#4B4A56" },
+      { transform: "scale(1)", color: "#636272" }, 
+      ],
+      {
+        duration: 300,
+        iterations: 1
+      }
+    );
+  });
+});
+
 //Pot animation
 function changeStateOfSection(elements, prefix, isOpening)
 {

@@ -529,10 +529,6 @@ html, body
             font-size: 12px
             & span
                 font-size: 14px
-        &__second-wrapper
-            right: -40px
-            &_closed
-                right: -140px
 
     .seventh-section
         &__video
@@ -540,12 +536,12 @@ html, body
             top: 180px
 
     .eighth-section
-        background-size: 110%
+        background-position-y: -47px
 
 //Вертикальный планшет
 @media (max-width: 991px)
     .container
-        max-width: 700px
+        max-width: 91%
 
     .first-section
         &__container
@@ -565,19 +561,22 @@ html, body
 
     .second-section
         &__text-wrapper
-            width: 700px
+            width: 100%
         &__plants-image
-            width: 680px
+            width: 97%
 
     .third-section
         height: 575px
         &__image
-            width: 360px
-            top: 112px
+            width: 51%
+            top: 50%
+            transform: translateY(-50%)
             left: 0
         &__wrapper
+            width: 39%
             right: 0
-            top: 109px
+            top: 50%
+            transform: translateY(-50%)
 
     .swiper
         width: 599px
@@ -604,30 +603,37 @@ html, body
             & span
                 font-size: 14px
         &__first-wrapper
-            left: -100px
+            width: 26%
+            left: 0px
             &_closed
                 left: -200px
         &__second-wrapper
-            right: -120px
+            width: 26%
+            right: 0px
             &_closed
                 right: -220px
 
     .sixth-section
         &__text-wrapper
-            width: 700px
+            width: 100%
 
     .seventh-section
         &__wrapper
+            width: 39%
+            top: 50%
+            transform: translateY(-50%)
             left: 0
         &__video
-            width: 400px
-            top: 181px
+            width: 57%
+            top: 50%
+            transform: translateY(-50%)
             right: 0
 
     .eighth-section
         display: flex
         justify-content: center
-        background-size: 140%
+        background-size: cover
+        background-position-y: 0px
         &__container
             padding-left: 0
         &__wrapper
@@ -636,7 +642,7 @@ html, body
 //горизонтальный телефон
 @media (max-width: 767px)
     .container
-        max-width: 516px
+        max-width: 89%
 
     .header__container
         z-index: 1
@@ -761,8 +767,8 @@ html, body
         background-color: $secondary
 
     .first-section
-        background-size: auto 850px
-        background-position: -130px -100px
+        background-size: cover
+        background-position: -108px 0px
         &__wrapper
             margin: 0 auto
             display: flex
@@ -784,13 +790,13 @@ html, body
             letter-spacing: 1.8px
         &-description
             text-align: left
-            font-size: 10px
+            font-size: 14px
 
     .black-section
         &-title
             font-size: 36px
         &-description
-            font-size: 10px
+            font-size: 14px
 
     .second-section
         &__text-wrapper
@@ -804,10 +810,12 @@ html, body
             padding-bottom: 50px
             width: 100%
             position: static
+            transform: translateY(0%)
         &__wrapper
             padding-top: 75px
-            position: static
             width: 100%
+            position: static
+            transform: translateY(0%)
         &__title
             margin-bottom: 10px
             br
@@ -819,11 +827,28 @@ html, body
 
     .swiper
         width: 400px
+    .works-slider-button
+        &:hover
+            transform: scale(1)
+            color: #636272
+        &__clicked
+            animation: sliderButtonClicked 0.2s forwards
+            
+    @keyframes sliderButtonClicked
+        0%
+            transform: scale(1)
+            color: #636272
+        50%
+            transform: scale(1.25)
+            color: #4B4A56
+        100%
+            transform: scale(1)
+            color: #636272
 
     .fifth-section
         margin-bottom: 100px
         &__container
-            height: 800px
+            height: 1100px
         &__example-wrapper
             height: 100%
         &__plant
@@ -834,10 +859,10 @@ html, body
         &__text-wrapper
             display: none
         &__mobile-text-wrapper
-            height: 575px
-            width: 148px
+            height: 877px
+            width: 35%
             position: absolute
-            top: 130px
+            top: 2%
             right: 0
             display: block
             transition: all 1.2s ease-in-out
@@ -848,9 +873,24 @@ html, body
                 opacity: 0
                 right: -175px
         &__text
-            font-size: 10px
+            font-size: 14px
             span
-                font-size: 12px
+                font-size: 16px
+        &__foam
+            &-front_opened
+                top: 454px
+            &-back_opened
+                top: 413px
+        &__pot
+            &-front_opened
+                top: 976px
+            &-back_opened
+                top: 914px 
+        &__gypsum
+            &-front_opened
+                top: 720px
+            &-back_opened
+                top: 685px
 
     .sixth-section
         margin-bottom: 100px
@@ -870,16 +910,17 @@ html, body
             position: static
             width: 100%
             padding-bottom: 50px
+            transform: translateY(0%)
         &__wrapper
+            position: static
             width: 100%
             padding-top: 75px
-            position: static
             margin-bottom: 30px
+            transform: translateY(0%)
 
     .eighth-section
         height: 376px
-        background-size: 200%
-        background-position: -100px -175px
+        background-position: 0 0
         &__wrapper
             display: flex
             flex-direction: column
@@ -890,6 +931,7 @@ html, body
             br
                 display: inline
         &__description
+            font-size: 14px
             text-align: left
         
     .footer__contacts
@@ -898,13 +940,18 @@ html, body
 //вертикальный телефон и маленьких планшетов
 @media (max-width: 575px)
     .container
-        width: 315px
+        max-width: 84%
 
     .swiper
         width: 146px
         &-slide
             width: 100% !important
 
+    .first-section
+        background-size: cover
+        background-position: -115px 0px
+        &__wrapper
+            padding-top: 0
     .fifth-section
         position: relative
         &__pseudo-container
@@ -912,35 +959,46 @@ html, body
             left: 0
             min-width: 100vw
         &__container
-            height: 825px
+            height: 1256px
         &__plant
             position: absolute
-            left: 40px
+            left: 4%
         &__description
             letter-spacing: 1px
         &__mobile-text-wrapper
-            right: 100px
+            height: 1095px
+            width: 39%
+            top: 6%
+            right: 30px
             &_closed
                 right: -20%
-
+        &__foam
+            &-front_opened
+                top: 495px
+            &-back_opened
+                top: 454px 
+        &__pot
+            &-front_opened
+                top: 1130px
+            &-back_opened
+                top: 1068px  
+        &__gypsum
+            &-front_opened
+                top: 772px
+            &-back_opened
+                top: 737px
 
     .sixth-section__photo
         background-size: cover
 
     .eighth-section
-        background-size: cover
-        background-position: -55px 0 
+        background-size: 240%
+        background-position: -295px 0 
         &__title
             font-size: 36px
         &__description
-            font-size: 10px
+            font-size: 14px
 
-//для менее широких вертикальных телефонов
-@media (max-width: 505px)
-    .fifth-section__mobile-text-wrapper
-            right: 2%
-            &_closed
-                right: -20%
 //ОЧЕНЬ маленький телефон
 @media (max-width: 320px)
     .container
@@ -950,4 +1008,8 @@ html, body
             right: 0
             &_closed
                 right: -200px
+
+    .eighth-section
+        background-size: cover
+        background-position: 0 0
     
