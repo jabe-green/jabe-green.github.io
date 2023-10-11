@@ -21,10 +21,18 @@ $seconds: 0.75s
 *
     box-sizing: border-box
 
-html, body
+html
+    height: 100vh
+    // overflow: hidden
+
+body
+    position: relative
+    overflow-x: hidden
     margin: 0
     padding: 0
-    overflow-x: hidden
+    height: 100vh
+    // perspective: 1px
+    // transform-style: preserve-3d
 
 .container
     max-width: 1152px
@@ -117,12 +125,18 @@ html, body
 
 .first-section
     height: 100vh
-    background-image: url("../img/first section background.webp")
-    background-attachment: fixed
-    background-blend-mode: multiply
-    background-color: rgba(0,0,0,0.45)
-    background-size: cover
     margin-bottom: 100px
+    position: relative
+    &__parallax
+        position: absolute
+        z-index: -1
+        width: 100%
+        height: 100%
+        background: url("../img/first section background.webp") top center
+        background-size: cover
+        background-blend-mode: multiply
+        background-color: rgba(0,0,0,0.45)
+        background-attachment: fixed
     &__container
         height: 100%
         display: flex
@@ -150,7 +164,7 @@ html, body
     transition: all 0.3s ease-in-out
     border: none
     height: 55px
-    width: 241px
+    width: 220px
     background-color: white
     border-radius: 3px
     font-family: 'Montserrat'
@@ -186,7 +200,7 @@ html, body
     &-description
         font-family: "Montserrat"
         font-size: 14px
-        font-weight: 300
+        font-weight: 400
         letter-spacing: 0.7px
         color: white
         line-height: 140%
@@ -327,8 +341,8 @@ html, body
         letter-spacing: 0.7px
         color: #636272
         & span
-            font-size: 18px
-            font-weight: 500
+            font-size: 14px
+            font-weight: 700
             letter-spacing: 0.9px
             color: $base-500
     &__plant
@@ -406,6 +420,7 @@ html, body
             width: 71px
     
 .sixth-section
+    overflow: hidden
     margin-bottom: 150px
     &__text-wrapper
         width: 762px
@@ -413,7 +428,7 @@ html, body
         margin-bottom: 75px
     &__title
         margin-bottom: 15px
-    &__photo
+    &__parallax
         background-image: url("../img/plantsPhoto.webp")
         background-position-x: center
         background-size: cover
@@ -453,7 +468,7 @@ html, body
     background-position-y: -100px
     &__container
         padding-left: 98px
-        height: 100%
+        height: 85%
         display: flex
         align-items: center
     &__wrapper
@@ -474,7 +489,7 @@ html, body
         font-family: Montserrat
         font-size: 14px
         font-style: normal
-        font-weight: 500
+        font-weight: 400
         color: white
         line-height: 140%
         letter-spacing: 0.7px
@@ -528,7 +543,7 @@ html, body
         &__text
             font-size: 12px
             & span
-                font-size: 14px
+                font-size: 12px
 
     .seventh-section
         &__video
@@ -601,7 +616,7 @@ html, body
         &__text
             font-size: 12px
             & span
-                font-size: 14px
+                font-size: 12px
         &__first-wrapper
             width: 26%
             left: 0px
@@ -762,7 +777,7 @@ html, body
             
     .preorder-button
         height: 44px
-        width: 228px
+        width: 190px
         font-size: 12px
         background-color: $secondary
 
@@ -875,7 +890,7 @@ html, body
         &__text
             font-size: 14px
             span
-                font-size: 16px
+                font-size: 14px
         &__foam
             &-front_opened
                 top: 454px
@@ -894,7 +909,7 @@ html, body
 
     .sixth-section
         margin-bottom: 100px
-        &__photo
+        &__parallax
             height: 246px
             background-size: contain
             background-attachment: scroll
@@ -919,7 +934,7 @@ html, body
             transform: translateY(0%)
 
     .eighth-section
-        height: 376px
+        height: 450px
         background-position: 0 0
         &__wrapper
             display: flex
@@ -988,7 +1003,7 @@ html, body
             &-back_opened
                 top: 737px
 
-    .sixth-section__photo
+    .sixth-section__parallax
         background-size: cover
 
     .eighth-section
@@ -1013,3 +1028,4 @@ html, body
         background-size: cover
         background-position: 0 0
     
+//help me

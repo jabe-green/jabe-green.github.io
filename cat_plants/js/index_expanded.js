@@ -1,8 +1,26 @@
 'use strict'
+//checking device for a parallax effect
+const firstParallax = document.querySelector(".first-section__parallax");
+const secondParallax = document.querySelector(".sixth-section__parallax");
+
+if (navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+      // firstParallax.style.backgroundAttachment = 'scroll';
+      // secondParallax.style.backgroundAttachment = 'scroll';
+      firstParallax.style.backgroundSize = "contain";
+      secondParallax.style.backgroundSize = "contain";
+    } else {
+      firstParallax.style.backgroundSize = "";
+      secondParallax.style.backgroundSize = "";
+    }
+
 //email copying
 const email = document.querySelectorAll(".contacts-email");
-//const email = document.querySelector(".contacts-email__text");
-//const emailTitle = document.querySelector(".contacts-email__title");
 
 email.forEach( (element) => {
   element.addEventListener("click", (event) => {
@@ -62,8 +80,6 @@ document.body.onscroll = function() {
 const worksSlider = document.querySelector(".works-slider .swiper");
 
 const swiper = new Swiper(worksSlider, {
-  observer: true,
-  observeParents: true,
   spaceBetween: 85,
   slidesPerView: 4,
   slidesPerGroup: 1,
@@ -105,7 +121,6 @@ buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     if(window.innerWidth > 767) {
       return false;
-      console.log(0)
     }
     
     button.animate([ 
@@ -187,7 +202,6 @@ const potTarget = plant;
 potObserver.observe(potTarget);
 
 //video replaying
-const test = document.querySelector(".seventh-section")
 const video = document.querySelector(".seventh-section__video");
 const videoObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(vid => {
